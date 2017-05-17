@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'flickraw', '~> 0.9.9'
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 
 group :development, :test do
