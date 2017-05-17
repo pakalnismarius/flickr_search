@@ -9,11 +9,9 @@
   </head>
 
   <body>
-  <h2>adkaljkdllka</h2>
-    <%= form_tag(search_path, method: "post") do %>
-      <%= text_field_tag(:tag) %>
-      <%= submit_tag("Search") %>
-    <% end %>
-    <%= yield %>
+    <div class="container">
+      <%= render "layouts/search" %>
+      <%= yield %>
+    </div>
   </body>
 </html>

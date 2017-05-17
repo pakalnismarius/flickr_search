@@ -1,0 +1,9 @@
+<div class="row" align="center">
+  <h3>Image Search</h3>
+</div>
+<div class="row in_center">
+  <%= form_tag(search_path, method: "post") do %>
+    <%= text_field_tag(:tag) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>

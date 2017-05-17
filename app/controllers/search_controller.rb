@@ -4,10 +4,11 @@ class SearchController < ApplicationController
 
   def index
   end
-  
+
   def search_result
     @list = flickr.photos.search(tags: params[:tag])
-    @urls = helpers.image_url_list(@list)
+    @urls = helpers.image_url_list(@list).each_slice(4).to_a
+
   end
 
 end

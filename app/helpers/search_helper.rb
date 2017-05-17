@@ -2,7 +2,7 @@ module SearchHelper
 
   def to_url(object)
     info = flickr.photos.getInfo(photo_id: object.id)
-    FlickRaw.url_s(info)
+    FlickRaw.url_q(info)
   end
 
   def image_url_list(search_list)
