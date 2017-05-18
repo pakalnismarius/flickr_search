@@ -1,13 +1,17 @@
-<% if @list.any? %>
-  <% @list.each do |row_of_urls| %>
-    <div class="row mt-40">
-      <% row_of_urls.each_with_index do |object, index| %>
-        <div class="col-md-3" align="center">
-          <%= image_tag(row_of_urls[index]) %>
+<div class="container container-form-2">
+  <% if @list.present? && @list.any? %>
+    <% @list.each do |row_of_urls| %>
+      <div class="row mt-40">
+        <div class="col-md-12">
+          <% row_of_urls.each_with_index do |object, index| %>
+            <div class="col-md-2" align="center">
+              <%= image_tag(row_of_urls[index], class: "img-fit") %>
+            </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+  <% else %>
+    <h4 align="center">Can't find anyting, try again!</h4>
   <% end %>
-<% else %>
-  <h4 align="center">Can't find anyting, try again!</h4>
-<% end %>
+</div>
