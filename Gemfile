@@ -17,7 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'flickraw', '~> 0.9.9'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-
+gem 'pry'
+gem 'pry-nav'
 
 group :development, :test do
   gem 'byebug', platform: :mri

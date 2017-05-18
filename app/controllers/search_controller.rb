@@ -6,9 +6,7 @@ class SearchController < ApplicationController
   end
 
   def search_result
-    @list = flickr.photos.search(tags: params[:tag])
-    @urls = helpers.image_url_list(@list).each_slice(4).to_a
-
+    @list = flickr.photos.search(tags: params[:tag]).map{|x| FlickRaw.url_q(x) }.each_slice(4).to_a
   end
 
 end
