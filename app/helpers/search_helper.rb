@@ -12,5 +12,5 @@ module SearchHelper
     end
    url_list
   end
-  
+
 end

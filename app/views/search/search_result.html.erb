@@ -1,9 +1,9 @@
 <% if @list.any? %>
-  <% @list.each do |row| %>
+  <% @list.each do |row_of_urls| %>
     <div class="row mt-40">
-      <% row.each_with_index do |url, index| %>
+      <% row_of_urls.each_with_index do |object, index| %>
         <div class="col-md-3" align="center">
-          <%= image_tag(row[index]) %>
+          <%= image_tag(row_of_urls[index]) %>
         </div>
       <% end %>
     </div>
