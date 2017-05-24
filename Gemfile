@@ -19,6 +19,8 @@ gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'pry'
 gem 'pry-nav'
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'activerecord-session_store', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri

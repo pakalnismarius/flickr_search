@@ -13,6 +13,7 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import "search";
 
 .mt-40 {
   margin-top: 40px;
@@ -66,4 +67,20 @@
   font-size: 40px;
   letter-spacing: 2px;
   color: white;
+}
+
+.img-center {
+  height: 500px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.search-result-img-size {
+  width: auto;
+  height: auto;
+  max-width: 160px;
+  max-height: 160px;
+  display: block;
+  margin: 0 auto;
 }
