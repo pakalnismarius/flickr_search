@@ -9,6 +9,10 @@
 
   <body>
     <%= render "layouts/search" %>
+    <% flash.each do |key, value| %>
+        <div class="container container-form-2 flash-text alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    <%= flash[:message] %>
     <%= yield %>
   </body>
 </html>

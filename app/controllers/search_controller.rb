@@ -6,10 +6,18 @@ class SearchController < ApplicationController
   end
 
   def search_result
-    if !params[:tag].blank?
+    if params[:tag].blank?
+      flash[:primary] = "Unable to find any results, please add some text"
+      redirect_to root_path
+    else
       session[:list] = []
       session[:list] = flickr.photos.search(tags: params[:tag]).map{|info| FlickRaw.url_b(info) }.each_slice(6).to_a
-      redirect_to search_result_path
+      if session[:list].any?
+        redirect_to search_result_path
+      else
+        flash[:danger] = "Can't find anything, try again!"
+        redirect_to root_path
+      end
     end
   end
 
