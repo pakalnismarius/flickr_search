@@ -1,0 +1,28 @@
+<div class="row mt-40">
+  <% image_number = 0 %>
+  <% urls.each do |row_of_url| %>
+    <div class="col-md-12">
+      <% row_of_url.each_with_index do |url, index| %>
+        <div class="col-md-2">
+          <img src=<%= row_of_url[index] %> onclick="openModal();currentSlide(<%= image_number += 1 %>)" class="hover-shadow search-result-img-size">
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <% urls.flatten.each_with_index do |url, index| %>
+        <div class="mySlides" align="center">
+          <div class="numbertext"><%= "#{index + 1} / #{urls.flatten.count}" %></div>
+          <img src=<%= url %> class="modal-image" >
+        </div>
+      <% end %>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+</div>
+
+

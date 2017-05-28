@@ -1,15 +1,9 @@
 
 <div class="container container-form-2">
-  <% @list.each do |row_of_urls| %>
-    <div class="row mt-40">
-      <div class="col-md-12">
-        <% row_of_urls.each_with_index do |url, index| %>
-          <div class="col-md-2" align="center">
-            <%= image_tag(row_of_urls[index], class: "search-result-img-size") %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
+  <div role="tabpanel" class="tab-pane" id="pyramid_pairs">  
+    <%= render partial: 'search/lightbox', locals: {urls: @list} %>
+  </div>
   <%= will_paginate @list %>
 </div>
+
+

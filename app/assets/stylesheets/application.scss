@@ -78,11 +78,13 @@
 
 .search-result-img-size {
   width: auto;
-  height: auto;
+  height: 100%;
   max-width: 160px;
   max-height: 160px;
-  display: block;
-  margin: 0 auto;
+  object-fit: contain;
+  display:block;
+  margin:auto;
+
 }
 
 .flash-text {
@@ -90,3 +92,8 @@
   font-size: 18px;
 
 }
+
+.modal-image {
+  width:auto; 
+  height: 500px;
+  }
